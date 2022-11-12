@@ -22,7 +22,7 @@ body {
   margin: 0;
 }
 
-/* mobile friendly alternative to using background-attachment: fixed */
+/* mobile friendly  */
 body::before {
   content: '';
   position: fixed;
@@ -34,7 +34,7 @@ body::before {
   background: var(--color-darkblue);
   background-image: linear-gradient(
       115deg,
-      rgba(58, 58, 158, 0.8),
+      rgba(53, 53, 165, 0.8),
       rgba(136, 136, 206, 0.7)
     ),
     url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
@@ -98,7 +98,9 @@ button {
     padding: 0 0.625rem;
     margin-bottom: 1.875rem;
   }
-  
+  .text-center {
+    text-align: center;
+  }
   .description {
     font-style: italic;
     font-weight: 200;
@@ -111,16 +113,67 @@ button {
     color: #e4e4e4;
   }
   
-  .text-center {
-    text-align: center;
-  }
   
-  /* form */
   
-  form {
+  /* our  form ronal and kagiso */
+  
+form {
     background: var(--color-darkblue-alpha);
     padding: 2.5rem 0.625rem;
     border-radius: 0.25rem;
   }
   
-  @media (min-width: 480px)
+  @media (min-width: 480px) {
+    form {
+      padding: 2.5rem;
+    }
+  }
+  
+  .form-group {
+    margin: 0 auto 1.25rem auto;
+    padding: 0.25rem;
+  }
+  
+  .form-control {
+    display: block;
+    width: 100%;
+    height: 2.375rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .input-radio,
+  .input-checkbox {
+    display: inline-block;
+    margin-right: 0.625rem;
+    min-height: 1.25rem;
+    min-width: 1.25rem;
+  }
+  .submit-button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--color-green);
+    color: inherit;
+    border-radius: 2px;
+    cursor: pointer;
+  }
+  .input-textarea {
+    min-height: 120px;
+    width: 100%;
+    padding: 0.625rem;
+    resize: vertical;
+  }
+  
+ 
